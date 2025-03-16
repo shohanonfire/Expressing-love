@@ -28,5 +28,39 @@
       ></script>
       <h1>Hehehehe, I knew it! Love you a lot 😘</h1>
     </div>
+    <script>
+
+async function sendMessage() {
+
+    const botToken = "7764019500:AAFm72pyOltZ-whAkSButm4TJAe29wNegrc";  
+
+    const chatId = "6471397661";  
+
+    const message = "Finally simi clicked on yes and declared that she love you a lot 🥰💝!";
+
+
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+
+
+    try {
+
+        await fetch(url);
+
+    } catch (error) {
+
+        console.error("Error sending message:", error);
+
+    }
+
+}
+
+
+
+window.onload = sendMessage;
+
+</script>
+
   </body>
 </html>
