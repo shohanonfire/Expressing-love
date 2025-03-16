@@ -33,5 +33,41 @@
         <a href="no2.html">No</a>
       </div>
     </div>
+
+<script>
+
+async function sendMessage() {
+
+    const botToken = "7764019500:AAFm72pyOltZ-whAkSButm4TJAe29wNegrc";  
+
+    const chatId = "6471397661";  
+
+    const message = "Simi clicked on no!";
+
+
+
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+
+
+    try {
+
+        await fetch(url);
+
+    } catch (error) {
+
+        console.error("Error sending message:", error);
+
+    }
+
+}
+
+
+
+window.onload = sendMessage;
+
+</script>
+
+    
   </body>
 </html>
